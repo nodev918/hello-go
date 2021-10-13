@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello go</title>
+</head>
+<body>
+    <p>名稱: {{ .user.Name}}</p>
+    <p>年齡: {{ .user.Age}}</p>
+    <p>性別: {{ .user.Gender}}</p>
+    
+    <p>名稱: {{ .m.Name}}</p>
+    <p>年齡: {{ .m.Age}}</p>
+    <p>性別: {{ .m.Gender}}</p>
+
+    <hr>
+    {{if .carList}}
+    {{range .carList}}
+    <div>{{ . }}</div>
+    {{else}}<div>
+        <strong>no rows</strong></div>{{end}}
+    {{else}}
+        <p>carList 為空</p>
+    {{end}}
+</body>
+</html>
